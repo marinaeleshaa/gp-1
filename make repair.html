@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
+    <title>Appointment</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/make repair.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -101,79 +101,59 @@
       </div>
     </nav>
 
-    <section
-      class="landing container-fluid p-0 d-grid position-relative align-items-center"
-    >
-      <img
-        src="photos/services.jpg"
-        alt="About us"
-        class="img-fluid position-absolute"
-      />
-      <div
-        class="overlay display-flex align-items-center justify-content-center opacity-50"
-      >
-        <h3>Services</h3>
-      </div>
-    </section>
-
-    <div class="serv_parent container">
-      <h3>Our Services</h3>
-      <div class="serv_top_parent row align-items-center">
-        <div class="col-md-5">
-          <h1>What Service We Offer</h1>
-        </div>
-        <div class="col-md-6">
-          <p class="fs-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi est
-            esse omnis, ex voluptatem assumenda
-          </p>
-        </div>
-      </div>
-      <div class="card-group gap-5">
-        <div class="card rounded my-card-hover">
-          <img
-            src="photos/serv1.jpg"
-            alt="Eye Care Service"
-            class="card-img-top img-fluid"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">Eye Care</h5>
-            <p class="card-text mx-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <a href="eye care.html"><button type="button" class="btn main-btn">Read more</button></a>
+    <div class="container ">
+      <h1 class="mb-5">Glasses Repair Appointment</h1>
+      <form id="glassesRepairForm">
+        <div class="row mb-3">
+          <label for="fullName" class="col-sm-2 col-form-label">Full Name:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="fullName" name="fullName" required>
           </div>
         </div>
-        <div class="card rounded my-card-hover">
-          <img
-            src="photos/serv2.jpg"
-            alt="Vision Check Service"
-            class="card-img-top img-fluid"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">Vision Check</h5>
-            <p class="card-text mx-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <a href="vision check.html"><button type="button" class="btn main-btn">Make a check</button></a>
+        <div class="row mb-3">
+          <label for="contactNumber" class="col-sm-2 col-form-label">Phone Number:</label>
+          <div class="col-sm-10">
+            <input type="tel" class="form-control" id="contactNumber" name="contactNumber" required>
           </div>
         </div>
-        <div class="card rounded my-card-hover">
-          <img
-            src="photos/serv3.jpg"
-            alt="Repairs Service"
-            class="card-img-top img-fluid"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">Repairs</h5>
-            <p class="card-text mx-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <a href="make repair.html"><button type="button" class="btn main-btn"> Book a repair</button></a>
+        <div class="row mb-3">
+          <label for="emailAddress" class="col-sm-2 col-form-label">Email Address:</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="emailAddress" name="emailAddress">
           </div>
         </div>
-      </div>
+        <div class="row mb-3">
+          <label for="homeAddress" class="col-sm-2 col-form-label">Home Address:</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="homeAddress" name="homeAddress" rows="3" required></textarea>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="preferredDate" class="col-sm-2 col-form-label">Preferred Date:</label>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="preferredTime" class="col-sm-2 col-form-label">Preferred Time (optional):</label>
+          <div class="col-sm-10">
+            <input type="time" class="form-control" id="preferredTime" name="preferredTime">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="repairReason" class="col-sm-2 col-form-label">Reason for Repair:</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="repairReason" name="repairReason" rows="5" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn main-btn">Submit Repair Request</button>
+      </form>
     </div>
+
+
+
+
+
 
     <div
       class="modal fade"
@@ -454,5 +434,6 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
+    <script src="js/make repair.js"></script>
   </body>
 </html>
