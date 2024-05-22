@@ -100,6 +100,27 @@
       </div>
     </nav>
 
+    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="photos/home1.jpg" alt="Image 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="photos/home2.jpg" alt="Image 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="photos/home3.jpg" alt="Image 3" />
+        </div>
+        <div class="carousel-item">
+          <img src="photos/home4.jpg" alt="Image 4" />
+        </div>
+      </div>
+      <div class="carousel-caption">
+        <h1 style="font-size: 80px">EYE CARE AT YOUR DOOR</h1>
+        <p style="font-size: 20px">Description.</p>
+      </div>
+    </div>
+
     <section style="height: 1000px"></section>
 
     <div
@@ -137,8 +158,8 @@
               </div>
               <div class="mb-3">
                 <label for="log_password" class="form-label fw-bold"
-                  >Password</label
-                >
+                  >Password <i class="fa-solid fa-eye-slash"></i>
+                </label>
                 <input
                   type="password"
                   class="form-control"
@@ -160,7 +181,13 @@
               <button type="submit" class="btn main-btn ms-0 mb-3">
                 Login
               </button>
-              <a href="#">Forgot Password?</a>
+              <a
+                href="#"
+                id="forgotPasswordLink"
+                data-bs-toggle="modal"
+                data-bs-target="#forgotPasswordPopup"
+                >Forgot Password?</a
+              >
               <hr />
               <p class="text-center fw-bold">OR</p>
               <hr />
@@ -172,6 +199,114 @@
                   <i class="fab fa-google me-3"></i> Login with Google
                 </a>
               </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="forgotPasswordPopup"
+      tabindex="-1"
+      aria-labelledby="forgotPasswordPopupLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="forgotPasswordPopupLabel">
+              Forgot Password
+            </h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="forgotPasswordForm">
+              <div class="mb-3">
+                <label for="forgot_email" class="form-label fw-bold"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="forgot_email"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn main-btn ms-0 mb-3">
+                <a
+                  href=""
+                  id="newPasswordPopuplink"
+                  data-bs-toggle="modal"
+                  data-bs-target="#newPasswordPopup"
+                  style="text-decoration: none; color: white"
+                  >Send Reset Link</a
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="newPasswordPopup"
+      tabindex="-1"
+      aria-labelledby="newPasswordPopupLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="newPasswordPopupLabel">
+              Create New Password
+            </h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="newPasswordForm">
+              <div class="mb-3">
+                <label for="new_password" class="form-label fw-bold"
+                  >New Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="new_password"
+                  aria-describedby="newPasswordHelp"
+                  placeholder="Enter your new password"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="confirm_password" class="form-label fw-bold"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirm_password"
+                  aria-describedby="confirmPasswordHelp"
+                  placeholder="Confirm your new password"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn main-btn ms-0 mb-3">
+                Set New Password
+              </button>
             </form>
           </div>
         </div>
@@ -379,6 +514,9 @@
       </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/home.js"></script>
