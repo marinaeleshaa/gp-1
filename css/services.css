@@ -73,6 +73,7 @@
 }
 
 .card-group {
+  margin-top: -30px;
   animation: var(--bottom_up);
   -webkit-animation: var(--bottom_up);
 }
